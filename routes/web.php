@@ -20,7 +20,11 @@ Route::get('/home', function () {
 Route::get('/latihan', [LatihanController::class, 'index'])->name('latihan');
 
 Route::get('/biodata', [LatihanController::class, 'biodata'])->name('biodata');
+Route::get('/kenapa', [LatihanController::class, 'biodata'])->name('kenapa');
 
 Route::get('/sbadmin', function () {
-    return view('index');
+    return view('index',[
+        "menu"=>"dashboard",
+    ]);
 })->name('sbadmin');
+

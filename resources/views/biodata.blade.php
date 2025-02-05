@@ -3,8 +3,9 @@
 @section('title', 'Halaman Biodata')
 
 @section('konten')
-    <link href="{{ asset('dist/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 
+    <link href="{{ asset('dist/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+<h1>{{$menu}}</h1>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -33,7 +34,8 @@
             </div>
         </div>
     </div>
-
+@endsection
+@section('script')
     <!-- Page level plugins -->
     <script src="{{ asset('dist/vendor/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('dist/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>

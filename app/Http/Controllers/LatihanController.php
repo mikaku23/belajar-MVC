@@ -21,8 +21,8 @@ class LatihanController extends Controller
     public function biodata(){
     $biodata = new biodata();
     return view('biodata',[
-        'biodata' => $biodata->data_siswa()
-
+        'biodata' => $biodata->data_siswa(),
+        'menu'=> 'biodata'
     ]);
 }
 
