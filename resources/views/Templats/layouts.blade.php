@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title></title>
+    <title>@yield('title')</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('dist/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -49,13 +49,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
+            @include('Templats.footer')
             <!-- End of Footer -->
 
         </div>
@@ -81,7 +75,7 @@
     <!-- Page level custom scripts -->
     <script src="{{asset('dist/js/demo/chart-area-demo.js')}}"></script>
     <script src="{{asset('dist/js/demo/chart-pie-demo.js')}}"></script>
-
+    @yield('script')
 </body>
 
 </html>

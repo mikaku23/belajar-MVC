@@ -14,14 +14,19 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="{{route('sbadmin')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
 
+<hr class="sidebar-divider d-none d-md-block">
 
+<li class="nav-item active">
+    <a class="nav-link" href="{{route('biodata')}}">
+        <i class="fas fa-user"></i>
+        <span>Biodata</span></a>
+</li>
 
-<!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">
 
 <!-- Sidebar Toggler (Sidebar) -->
