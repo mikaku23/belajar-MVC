@@ -14,7 +14,8 @@ class LatihanController extends Controller
         return view('latihan',[
            'judul' => 'Belajar Laravel 11',
             'materi' => 'MVC Laravel',
-            'tanggal' => $tanggal->now()->isoFormat('dddd, D MMMM Y'),  
+            'tanggal' => $tanggal->now()->isoFormat('dddd, D MMMM Y'), 
+            'menu' => 'latihan'
         ]);
     }
 

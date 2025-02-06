@@ -19,7 +19,7 @@
         <span>Dashboard</span></a>
 </li>
 
-<hr class="sidebar-divider d-none d-md-block">
+<hr class="sidebar-divider my-0">
 
 <li class="nav-item {{ $menu == 'biodata' ? 'active' : ''}}">
     <a class="nav-link" href="{{route('biodata')}}">
@@ -27,8 +27,24 @@
         <span>Biodata</span></a>
 </li>
 
-<hr class="sidebar-divider d-none d-md-block">
+<hr class="sidebar-divider my-0">
 
+<li class="nav-item {{ $menu == 'home' ? 'active' : ''}}">
+    <a class="nav-link" href="{{route('home')}}">
+        <i class="fas fa-home"></i>
+        <span>Home</span></a>
+</li>
+
+<hr class="sidebar-divider my-0">
+
+<li class="nav-item {{ $menu == 'latihan' ? 'active' : ''}}">
+    <a class="nav-link" href="{{route('latihan')}}">
+        <i class="fas fa-tasks"></i>
+        <span>Latihan</span></a>
+</li>
+
+<hr class="sidebar-divider my-0">
+<br>
 <!-- Sidebar Toggler (Sidebar) -->
 <div class="text-center d-none d-md-inline">
     <button class="rounded-circle border-0" id="sidebarToggle"></button>

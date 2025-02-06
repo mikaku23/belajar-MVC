@@ -13,7 +13,8 @@ Route::get('/home', function () {
         'name' => '  haliq raikageh',
         'kelas' => 'XI RPL 1',
         'alamat' => 'desa kumo',
-        'mbr' => $mbr
+        'mbr' => $mbr,
+        'menu'=>'home'
     ]);
 })->name('home');
 
