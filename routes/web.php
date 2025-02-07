@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\LatihanController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LocalController;
+use App\Http\Controllers\LatihanController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,11 +22,15 @@ Route::get('/home', function () {
 Route::get('/latihan', [LatihanController::class, 'index'])->name('latihan');
 
 Route::get('/biodata', [LatihanController::class, 'biodata'])->name('biodata');
-Route::get('/kenapa', [LatihanController::class, 'biodata'])->name('kenapa');
-
+ 
 Route::get('/sbadmin', function () {
     return view('index',[
         "menu"=>"dashboard",
     ]);
 })->name('sbadmin');
 
+Route::get('/local', [LocalController::class, 'index'])->name('local.index');
+
+Route::get('/local/create', [LocalController::class, 'create'])->name('local.create');
+
+Route::post('/local', [LocalController::class, 'store'])->name('local.store');

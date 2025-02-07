@@ -44,6 +44,14 @@
 </li>
 
 <hr class="sidebar-divider my-0">
+
+<li class="nav-item {{ $menu == 'local' ? 'active' : ''}}">
+    <a class="nav-link" href="{{route('local.index')}}">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <span>Lokal</span></a>
+</li>
+
+<hr class="sidebar-divider my-0">
 <br>
 <!-- Sidebar Toggler (Sidebar) -->
 <div class="text-center d-none d-md-inline">

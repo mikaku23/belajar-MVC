@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('locals', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_kelas',10);
+            $table->string('wali_kelas',30);
             $table->timestamps();
         });
     }
