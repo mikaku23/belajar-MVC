@@ -37,6 +37,15 @@ class SiswaController extends Controller
             'alamat'=>'required',
             'local_id'=>'required',
             'foto'=>'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+        ],[
+            'nama.required'=>'Nama Harus Diisi',
+            'nisn.required'=>'NISN Harus Diisi',
+            'jk.required'=>'Jenis Kelamin Harus Diisi',
+            'alamat.required'=>'Alamat Harus Diisi',
+            'local_id.required'=>'Kelas Harus Diisi',
+            'foto.image'=>'File Harus Berupa Gambar',
+            'foto.mimes'=>'Format File Harus jpg,png,jpeg,gif,svg',
+            'foto.max'=>'Ukuran File Maksimal 2MB'
         ]);
 
         $simpan_foto=$request->file('foto')->store('foto_siswa');

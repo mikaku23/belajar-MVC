@@ -34,6 +34,7 @@
                             <tr>
                                 <th>No</th>
                                 <th>Nama</th>
+                                <th>Nisn</th>
                                 <th>Nama Kelas</th>
                                 <th>Aksi</th>
                             </tr>
@@ -42,21 +43,11 @@
                             @foreach($datasiswa as $ds)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$ds['nama']}}</td>
-                                <td>{{$ds['nama_kelas']}}</td>
+                                <td>{{$ds->nama}}</td>
+                                <td>{{$ds->nisn}}</td>
+                                <td>{{$ds->local->nama_kelas}}</td>
                                 <td>
-                                    <div class="action-btns">
-
-                                        <a href="{{ route('local.view', $dk['id']) }}" class='btn btn-outline-primary btn-sm'><i class='fas fa-eye' title="show"></i></a>
-
-                                        <a href="{{route('local.edit',$dk['id'])}}" class='btn btn-outline-warning btn-sm'><i class='fas fa-pencil-alt' title="edit"></i></a>
-
-                                        <form action="{{route('local.hapus',$dk['id'])}}" method="post">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class='btn btn-outline-danger btn-sm'><i class='far fa-trash-alt' title="hapus" onclick="return confirm('apakah anda yakin ingin menghapus data ini?')"></i></button>
-                                        </form>
-                                    </div>
+                                    <div class="action-btn"></div>
                                 </td>
                             </tr>
                             @endforeach
