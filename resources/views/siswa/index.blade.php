@@ -47,7 +47,9 @@
                                 <td>{{$ds->nisn}}</td>
                                 <td>{{$ds->local->nama_kelas}}</td>
                                 <td>
-                                    <div class="action-btn"></div>
+                                    <div class="action-btns">
+                                        <a href="{{ route('siswa.show', $ds->id) }}" class='btn btn-outline-primary btn-sm'><i class='fas fa-eye' title="show"></i></a>
+                                    </div>
                                 </td>
                             </tr>
                             @endforeach

@@ -60,4 +60,13 @@ class SiswaController extends Controller
         $siswa->save();
         return redirect(route('siswa.index'));
     }
+    public function show($id):view
+    {
+        $siswa=Siswa::find($id);
+        return view('siswa.show',[
+            'menu'=>'siswa',
+            'title'=>'Detail Data Siswa',
+            'siswa'=>$siswa
+        ]);
+    }
 }
