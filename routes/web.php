@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LocalController;
+use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\LatihanController;
 
 Route::get('/', function () {
@@ -42,3 +43,5 @@ Route::put('/local/update',[LocalController::class, 'update'])->name('local.upda
 Route::delete('/local/delete/{id}', [LocalController::class, 'destroy'])->name('local.hapus');
 
 Route::get('/local/view/{id}', [LocalController::class, 'show'])->name('local.view');
+
+Route::resource('siswa', SiswaController::class);

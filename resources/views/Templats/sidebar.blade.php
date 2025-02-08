@@ -52,6 +52,13 @@
 </li>
 
 <hr class="sidebar-divider my-0">
+<li class="nav-item {{ $menu == 'siswa' ? 'active' : ''}}">
+    <a class="nav-link" href="{{route('siswa.index')}}">
+        <i class="fas fa-user-graduate"></i>
+        <span>siswa</span></a>
+</li>
+
+<hr class="sidebar-divider my-0">
 <br>
 <!-- Sidebar Toggler (Sidebar) -->
 <div class="text-center d-none d-md-inline">
