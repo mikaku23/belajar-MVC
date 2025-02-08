@@ -8,15 +8,17 @@
                 tambah data kelas
             </div>
             <div class="card-body">
-                <form action="{{route('local.store')}}" method="post">
+                <form action="{{route('local.update')}}" method="post">
                     @csrf
+                    @method('PUT')
+                    <input type="hidden" name="id" value="{{$datakelas->id}}">
                     <div class="col mt-2">
                         <label for="nama_kelas" class="text-gray-900">Nama Kelas</label>
-                        <input type="text" name="nama_kelas" id="nama_kelas" class="form-control" placeholder="masukkan nama kelas">
+                        <input type="text" name="nama_kelas" id="nama_kelas" class="form-control" value="{{$datakelas->nama_kelas}}"> 
                     </div>
                     <div class="col mt-2">
                         <label for="wali_kelas" class="text-gray-900">Wali Kelas</label>
-                        <input type="text" name="wali_kelas" id="wali_kelas" class="form-control" placeholder="masukkan nama walikelas">
+                        <input type="text" name="wali_kelas" id="wali_kelas" class="form-control" value="{{$datakelas->wali_kelas}}">
                     </div>
                     <button type="submit" class="btn btn-md btn-primary float-right mt-4">Simpan</button>
                 </form>

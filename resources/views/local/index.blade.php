@@ -33,12 +33,12 @@
                         <thead class="text-center">
                             <tr>
                                 <th>No</th>
-                                <th>Nama</th>
-                                <th>Kelas</th>
+                                <th>Nama Kelas</th>
+                                <th>Wali Kelas</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-center">
                             @foreach($datakelas as $dk)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
@@ -47,8 +47,15 @@
                                 <td>
                                     <div class="action-btns">
                                         
-                                        <a href="" class='btn btn-outline-warning btn-sm'><i class='fas fa-pencil-alt' title="edit"></i></a>
-                                        <a href="" class='btn btn-outline-danger btn-sm'><i class='far fa-trash-alt' title="hapus"></i></a>
+                                        <a href="{{ route('local.view', $dk['id']) }}" class='btn btn-outline-primary btn-sm'><i class='fas fa-eye' title="show"></i></a>
+
+                                        <a href="{{route('local.edit',$dk['id'])}}" class='btn btn-outline-warning btn-sm'><i class='fas fa-pencil-alt' title="edit"></i></a>
+
+                                        <form action="{{route('local.hapus',$dk['id'])}}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class='btn btn-outline-danger btn-sm'><i class='far fa-trash-alt' title="hapus" onclick="return confirm('apakah anda yakin ingin menghapus data ini?')"></i></button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>

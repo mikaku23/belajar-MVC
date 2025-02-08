@@ -30,4 +30,35 @@ class LocalController extends Controller
         $databaru->save(); 
         return redirect(route('local.index'));
     }
+    public function edit($id){
+        $datakelas = local::find($id);
+        return view('local.edit', [
+            'menu' => 'local',
+            'datakelas' => $datakelas,
+        ]);
+    }
+    public function update(){
+        $validasi = request()->validate([
+            'id'=>'required',
+            'nama_kelas' => 'required',
+            'wali_kelas' => 'required'
+        ]);
+        $datakelas = local::find($validasi['id']);
+        $datakelas->nama_kelas = $validasi['nama_kelas'];
+        $datakelas->wali_kelas = $validasi['wali_kelas'];
+        $datakelas->save();
+        return redirect(route('local.index'));
+    }
+    public function destroy($id){
+        $datakelas = local::find($id);
+        $datakelas->delete();
+        return redirect(route('local.index'));
+    }
+    public function show($id){
+        $datakelas = local::find($id);
+        return view('local.view', [
+            'menu' => 'local',
+            'datakelas' => $datakelas,
+        ]);
+    }
 }

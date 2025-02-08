@@ -34,3 +34,11 @@ Route::get('/local', [LocalController::class, 'index'])->name('local.index');
 Route::get('/local/create', [LocalController::class, 'create'])->name('local.create');
 
 Route::post('/local', [LocalController::class, 'store'])->name('local.store');
+
+Route::get('/local/edit/{id}',[LocalController::class, 'edit'])->name('local.edit');
+
+Route::put('/local/update',[LocalController::class, 'update'])->name('local.update');
+
+Route::delete('/local/delete/{id}', [LocalController::class, 'destroy'])->name('local.hapus');
+
+Route::get('/local/view/{id}', [LocalController::class, 'show'])->name('local.view');
