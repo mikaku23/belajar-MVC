@@ -7,8 +7,8 @@
     <div class="col-6">
         <div class="card">
             <div class="card-header">
-<h5 class="m-0 font-weight-bold text-gray">
-                Detail Data Siswa
+                <h5 class="m-0 font-weight-bold text-primary">
+                    Detail Data {{ $siswa->nama }}
             </div>
             <div class="card-body">
                 <table class="table table-bordered">
@@ -41,6 +41,9 @@
                         <td><img src="{{ asset('storage/' . $siswa->foto) }}" alt="foto" width="100"></td>
                     </tr>
                 </table>
+                <a href="{{route('siswa.index')}}">
+                    <button type="button" class="btn btn-md btn-success float-right mt-4 mr-2">Kembali</button>
+                </a>
             </div>
         </div>
     </div>

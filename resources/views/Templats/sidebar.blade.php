@@ -48,7 +48,7 @@
 <li class="nav-item {{ $menu == 'local' ? 'active' : ''}}">
     <a class="nav-link" href="{{route('local.index')}}">
         <i class="fas fa-chalkboard-teacher"></i>
-        <span>Lokal</span></a>
+        <span>Kelas</span></a>
 </li>
 
 <hr class="sidebar-divider my-0">

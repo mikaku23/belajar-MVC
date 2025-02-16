@@ -18,12 +18,12 @@
 @endsection
 
 @section('konten')
-<a href="{{route('local.create')}}" class="btn btn-primary mb-2 ">Tambah Data Kelas</a>
+<a href="{{route('local.create')}}" class="btn btn-success mb-2 "><i class="fas fa-plus"></i> Tambah Data Kelas</a>
 <div class="row">
     <div class="col">
         <div class="card">
             <div class="card-header">
-                <h5 class="m-0 font-weight-bold text-gray">
+                <h5 class="m-0 font-weight-bold text-gray text-primary">
                     Manajemen Data Kelas
                 </h5>
             </div>
@@ -46,7 +46,7 @@
                                 <td>{{$dk['wali_kelas']}}</td>
                                 <td>
                                     <div class="action-btns">
-                                        
+
                                         <a href="{{ route('local.view', $dk['id']) }}" class='btn btn-outline-primary btn-sm'><i class='fas fa-eye' title="show"></i></a>
 
                                         <a href="{{route('local.edit',$dk['id'])}}" class='btn btn-outline-warning btn-sm'><i class='fas fa-pencil-alt' title="edit"></i></a>

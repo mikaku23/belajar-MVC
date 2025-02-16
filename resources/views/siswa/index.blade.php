@@ -18,12 +18,12 @@
 @endsection
 
 @section('konten')
-<a href="{{route('siswa.create')}}" class="btn btn-primary mb-2 ">Tambah Data Kelas</a>
+<a href="{{route('siswa.create')}}" class="btn btn-success mb-2 "><i class="fas fa-plus"></i>  Tambah Data Siswa</a>
 <div class="row">
     <div class="col">
         <div class="card">
             <div class="card-header">
-                <h5 class="m-0 font-weight-bold text-gray">
+                <h5 class="m-0 font-weight-bold text-gray text-primary">
                     Manajemen Data Siswa
                 </h5>
             </div>
@@ -49,6 +49,14 @@
                                 <td>
                                     <div class="action-btns">
                                         <a href="{{ route('siswa.show', $ds->id) }}" class='btn btn-outline-primary btn-sm'><i class='fas fa-eye' title="show"></i></a>
+
+                                        <a href="{{route('siswa.edit',$ds['id'])}}" class='btn btn-outline-warning btn-sm'><i class='fas fa-pencil-alt' title="edit"></i></a>
+
+                                       <form action="{{route('siswa.destroy',$ds['id'])}}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class='btn btn-outline-danger btn-sm'><i class='far fa-trash-alt' title="hapus" onclick="return confirm('apakah anda yakin ingin menghapus data ini?')"></i></button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>
